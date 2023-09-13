@@ -153,10 +153,10 @@ public class PartTestClass {
             cqPart.compliancequest__Reason_For_Change__c = 'test';
             Update cqPart;
 
-            List<Task> tsk = [Select id,WhatId,Status,Subject from task where whatId =: partCqList[0].Id ];
+            List<Task> tsk = [Select id,WhatId,Status,Subject from task where whatId =:cqPart.Id ];
             system.assertEquals(1,tsk.size());
-            system.assertEquals(partCQ[0].Id,tsk[0].WhatId);
-            system.assertEquals('Complete',tsk[0].Status);
+            system.assertEquals(cqPart.Id,tsk[0].WhatId);
+            system.assertEquals('Completed',tsk[0].Status);
         }
         
     }
