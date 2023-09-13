@@ -141,8 +141,8 @@ public class PartTestClass {
             insert new PermissionSetAssignment(AssigneeId = u.id, PermissionSetId = ps.Id);
            
             compliancequest__SQX_Part__c testPart1 =  new compliancequest__SQX_Part__c();
-            testPart1.Name = 'TestNameTushar17745';
-            testPart1.compliancequest__Part_Number__c = 'Tushar774';
+            testPart1.Name = 'TestNameTushar177456';
+            testPart1.compliancequest__Part_Number__c = 'Tushar7745';
             testPart1.compliancequest__Part_Risk_Level__c = 2;
             testPart1.compliancequest__Part_Family__c = partCQ[0].Id;
             insert testPart1;  
@@ -153,7 +153,6 @@ public class PartTestClass {
             cqPart.compliancequest__Reason_For_Change__c = 'test';
             Update cqPart;
 
-            
             List<Task> tsk = [Select id,WhatId,Status,Subject from task where whatId =: partCqList[0].Id ];
             system.assertEquals(1,tsk.size());
             system.assertEquals(partCQ[0].Id,tsk[0].WhatId);
