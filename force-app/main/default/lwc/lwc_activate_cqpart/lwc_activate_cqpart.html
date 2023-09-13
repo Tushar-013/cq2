@@ -1,0 +1,10 @@
+<template>
+    <template if:true={isCQAdmin}>
+        <lightning-card title="Activate CQ object">
+            <lightning-button label="Activate CQ object" onclick={handleClick}></lightning-button>
+            <template if:true={data}>              
+                <lightning-input label="Reason For Change"  value={data.compliancequest__Reason_For_Change__c} data-field="reasonForChange" required="true"></lightning-input>
+            </template>
+        </lightning-card>
+    </template>
+</template>

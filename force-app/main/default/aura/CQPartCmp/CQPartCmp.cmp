@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="pageReference" type="Object"/>
+    <lightning:navigation aura:id="navService"/>
+    <lightning:card title="Cq part Update">
+        <lightning:recordEditForm objectApiName="compliancequest__SQX_Part__c" recordId="{!v.recordId}" onerror = "{!c.handleError}" onsuccess="{!c.handleSuccess}">
+            <lightning:outputField fieldName="compliancequest__Part_Number__c" />
+            <lightning:inputField fieldName="compliancequest__Active__c" />
+            <lightning:inputField fieldName="compliancequest__Reason_For_Change__c" />
+            <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+        </lightning:recordEditForm>
+    </lightning:card>
+</aura:component>

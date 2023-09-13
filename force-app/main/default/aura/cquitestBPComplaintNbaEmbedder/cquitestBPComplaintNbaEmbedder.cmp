@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,force:hasRecordId" extends="cqext:cqNBA">
+    <lightning:quickActionAPI aura:id="quickActionAPI" />
+    <c:cquitestBPComplaintNba onactionclick="{!c.invokeQuickAction}" onshowsubmitforapproval="{!c.setValue}" recordId="{!v.recordId}" />
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component controller="PartTriggerHandler" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="partData" type="SObject" default='{compliancequest__Active__c: false, compliancequest__Reason_For_Change__c: ""}'/>
+	<lightning:card title="Activate Part">
+        <lightning:input type="checkbox" label="Active" checked="{!v.partData.compliancequest__Active__c}"/>
+        <lightning:textarea label="Reason For Change" value="{!v.partData.compliancequest__Reason_For_Change__c}" required="true" aura:id="reasonChange"/>
+        <lightning:button label="Submit" onclick="{!c.handleButtonClick}"/>
+    </lightning:card>
+</aura:component>

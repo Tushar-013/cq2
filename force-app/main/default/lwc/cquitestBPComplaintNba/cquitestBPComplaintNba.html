@@ -1,0 +1,41 @@
+<template>
+ 
+    <div if:true={allDone}>
+        <ul class="slds-button-group-row">
+            
+                
+                
+            <template if:true={visible.cqext__cqui_Submit}>
+                <li class="slds-button-group-item">
+                    
+                    
+                    <lightning-button
+                        label={CQTESTBP_SUBMIT}
+                        name="cqext__cqui_Submit"
+                        onclick={invokeAction}
+                    ></lightning-button>
+                    
+                </li>
+            </template>
+                
+            
+                
+                
+            <template if:true={visible.cqext__cqui_Initiate}>
+                <li class="slds-button-group-item">
+                    
+                    
+                    <lightning-button
+                        label={CQTESTBP_INITIATE}
+                        name="cqext__cqui_Initiate"
+                        onclick={invokeAction}
+                    ></lightning-button>
+                    
+                </li>
+            </template>
+                
+            
+        </ul>
+        
+    </div>
+</template>

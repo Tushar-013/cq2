@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+                controller="PartActivationController">
+   <aura:attribute name="showPartActivation" type="boolean" default="false" />
+    
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+                 
+    
+    
+                   
+</aura:component>

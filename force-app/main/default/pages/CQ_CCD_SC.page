@@ -1,0 +1,20 @@
+<apex:page standardController="Account" extensions="CQ_CCD_Assessment">
+    <apex:pageblock > 	
+        <apex:pageBlockSection title="Account Info">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.Type}"/>
+        </apex:pageBlockSection>
+        
+    </apex:pageblock>
+    
+    <apex:pageblock > 
+        <apex:pageBlockTable value="{!aList}" var="a">
+            
+            <apex:column value="{!a.CQ_CCD_Candidate_Name__c}"/> 
+            <apex:column value="{!a.CQ_CCD_Score__c}"/>
+            
+        </apex:pageBlockTable>	
+    </apex:pageblock>
+    
+    
+</apex:page>
